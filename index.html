@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="AvaDesk AI Receptionist demo for local businesses."
+  />
+
+  <title>AvaDesk — AI Receptionist Demo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="container nav">
+
+      <a class="brand" href="#top" aria-label="AvaDesk home">
+        <span class="brand-mark">A</span>
+
+        <span>AvaDesk</span>
+
+        <small>AI Receptionist</small>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="btn btn-dark nav-cta" href="#demo">
+        Try the demo
+        <span>↗</span>
+      </a>
+
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+    </div>
+
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+
+      <a class="btn btn-dark" href="#demo">
+        Try the demo
+      </a>
+    </div>
+  </header>
+
+
+  <!-- ================= MAIN ================= -->
+  <main id="top">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+
+      <div class="container hero-grid">
+
+        <!-- LEFT -->
+        <div class="hero-copy">
+
+          <div class="eyebrow">
+            <span class="status-dot"></span>
+            Available 24/7
+          </div>
+
+          <h1>
+            Your business,
+            <span>always ready</span>
+            to answer.
+          </h1>
+
+          <p class="hero-text">
+            A smart AI receptionist demo that answers common questions,
+            captures leads, and helps customers request appointments —
+            even after hours.
+          </p>
+
+          <div class="hero-actions">
+
+            <a class="btn btn-primary" href="#demo">
+              Talk to Ava
+              <span>→</span>
+            </a>
+
+            <a class="btn btn-ghost" href="#features">
+              Explore features
+            </a>
+
+          </div>
+
+
+          <!-- STATS -->
+          <div class="trust-row">
+
+            <div class="mini-stat">
+              <strong>24/7</strong>
+              <span>Always available</span>
+            </div>
+
+            <div class="mini-stat">
+              <strong>3 sec</strong>
+              <span>Fast first reply</span>
+            </div>
+
+            <div class="mini-stat">
+              <strong>1 inbox</strong>
+              <span>Leads in one place</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- RIGHT CHAT DEMO -->
+        <div class="hero-card" id="demo">
+
+          <div class="demo-window">
+
+            <!-- CHAT TOP -->
+            <div class="demo-topbar">
+
+              <div class="demo-profile">
+
+                <div class="avatar">
+                  A
+                </div>
+
+                <div>
+                  <strong>Ava</strong>
+                  <small>Online • AI Receptionist</small>
+                </div>
+
+              </div>
+
+              <span class="live-pill">
+                <span class="status-dot"></span>
+                Live
+              </span>
+
+            </div>
+
+
+            <!-- CHAT -->
+            <div class="chat" id="chat">
+
+              <div class="message bot">
+
+                <span class="bubble-label">
+                  Ava
+                </span>
+
+                <div class="bubble">
+
+                  Hi! I’m Ava, the virtual receptionist for
+                  <strong>Northstar Home Services</strong>.
+                  How can I help today?
+
+                </div>
+
+              </div>
+
+
+              <!-- QUICK BUTTONS -->
+              <div class="quick-replies" id="quickReplies">
+
+                <button data-message="What services do you offer?">
+                  Services
+                </button>
+
+                <button data-message="What are your opening hours?">
+                  Opening hours
+                </button>
+
+                <button data-message="I'd like to book an appointment.">
+                  Book an appointment
+                </button>
+
+                <button data-message="I'd like to request a quote.">
+                  Request a quote
+                </button>
+                <button data-message="I want to talk to a human.">
+                  Talk to a human
+                 </button>
+
+              </div>
+
+            </div>
+
+
+            <!-- CHAT INPUT -->
+            <form class="chat-input" id="chatForm">
+
+              <input
+                id="chatInput"
+                type="text"
+                placeholder="Ask Ava anything…"
+                autocomplete="off"
+              />
+
+              <button
+                type="submit"
+                aria-label="Send message"
+              >
+                ➜
+              </button>
+
+            </form>
+
+
+            <div class="demo-note">
+              Demo mode • Responses are pre-configured for this portfolio project
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+    <section class="section" id="features">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">
+            Built for small businesses
+          </div>
+
+          <h2>
+            Turn missed questions into
+            <span>new opportunities.</span>
+          </h2>
+
+          <p>
+            One simple assistant can handle repetitive conversations
+            while your team focuses on real work.
+          </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+          <!-- FEATURE 1 -->
+          <article class="feature-card">
+
+            <div class="icon">
+              ✦
+            </div>
+
+            <h3>
+              Instant answers
+            </h3>
+
+            <p>
+              Give customers fast answers about services,
+              hours, locations, pricing, and common questions.
+            </p>
+
+          </article>
+
+
+          <!-- FEATURE 2 -->
+          <article class="feature-card">
+
+            <div class="icon">
+              ⌁
+            </div>
+
+            <h3>
+              Lead capture
+            </h3>
+
+            <p>
+              Collect a name, contact details, service request,
+              and preferred time before a lead gets lost.
+            </p>
+
+          </article>
+
+
+          <!-- FEATURE 3 -->
+          <article class="feature-card">
+
+            <div class="icon">
+              ◷
+            </div>
+
+            <h3>
+              Appointment requests
+            </h3>
+
+            <p>
+              Let customers request a date and time,
+              then hand the lead to a human for confirmation.
+            </p>
+
+          </article>
+
+
+          <!-- FEATURE 4 -->
+          <article class="feature-card">
+
+            <div class="icon">
+              ↗
+            </div>
+
+            <h3>
+              Human handoff
+            </h3>
+
+            <p>
+              Escalate questions or requests that need a real
+              person instead of forcing an AI-only answer.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="workflow section" id="how-it-works">
+
+      <div class="container workflow-grid">
+
+        <div>
+
+          <div class="eyebrow">
+            Simple workflow
+          </div>
+
+          <h2>
+            From question to qualified lead in
+            <span>three steps.</span>
+          </h2>
+
+          <p class="muted">
+            This demo shows the front-end experience.
+            A real production version can connect the same UI
+            to an AI model, CRM, calendar, WhatsApp, or voice agent.
+          </p>
+
+        </div>
+
+
+        <div class="steps">
+
+          <!-- STEP 1 -->
+          <div class="step">
+
+            <span>01</span>
+
+            <div>
+
+              <h3>
+                Customer asks
+              </h3>
+
+              <p>
+                A visitor starts a conversation
+                with the receptionist.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- STEP 2 -->
+          <div class="step">
+
+            <span>02</span>
+
+            <div>
+
+              <h3>
+                AI responds
+              </h3>
+
+              <p>
+                The assistant answers using the
+                business knowledge it has been given.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- STEP 3 -->
+          <div class="step">
+
+            <span>03</span>
+
+            <div>
+
+              <h3>
+                Lead is captured
+              </h3>
+
+              <p>
+                For bookings or quotes, the customer
+                submits their details for follow-up.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= BUSINESS SHOWCASE ================= -->
+    <section class="demo-section section">
+
+      <div class="container">
+
+        <div class="showcase-card">
+
+          <div>
+
+            <div class="eyebrow">
+              Example business
+            </div>
+
+            <h2>
+              Northstar Home Services
+            </h2>
+
+            <p>
+              HVAC, plumbing, electrical and home maintenance
+              in Dubai. Customers can ask questions or request
+              a callback.
+            </p>
+
+
+            <div class="tag-row">
+
+              <span>
+                HVAC
+              </span>
+
+              <span>
+                Plumbing
+              </span>
+
+              <span>
+                Electrical
+              </span>
+
+              <span>
+                24/7 Chat
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <button class="btn btn-dark" id="openLeadBtn">
+
+            Request a callback
+            <span>→</span>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT / LEAD FORM ================= -->
+    <section class="section contact-section" id="contact">
+
+      <div class="container contact-grid">
+
+        <!-- LEFT -->
+        <div>
+
+          <div class="eyebrow">
+            Demo contact flow
+          </div>
+
+          <h2>
+            Collect the right details,
+            <span>without the back-and-forth.</span>
+          </h2>
+
+          <p class="muted">
+            Try the form below. It validates the fields and creates
+            a local confirmation message — no real data is submitted anywhere.
+          </p>
+
+        </div>
+
+
+        <!-- FORM -->
+        <form class="lead-form" id="leadForm">
+
+          <div class="field-grid">
+
+            <label>
+              Full name
+
+              <input
+                required
+                id="leadName"
+                type="text"
+                placeholder="e.g. Sarah Ahmed"
+              />
+
+            </label>
+
+
+            <label>
+              Phone or email
+
+              <input
+                required
+                id="leadContact"
+                type="text"
+                placeholder="+971 50 123 4567"
+              />
+
+            </label>
+
+          </div>
+
+
+          <label>
+
+            Service needed
+
+            <select id="leadService">
+
+              <option>
+                HVAC / AC repair
+              </option>
+
+              <option>
+                Plumbing
+              </option>
+
+              <option>
+                Electrical
+              </option>
+
+              <option>
+                General maintenance
+              </option>
+
+            </select>
+
+          </label>
+
+
+          <div class="field-grid">
+
+            <label>
+
+              Preferred date
+
+              <input
+                id="leadDate"
+                type="date"
+              />
+
+            </label>
+
+
+            <label>
+
+              Preferred time
+
+              <select id="leadTime">
+
+                <option>
+                  Morning
+                </option>
+
+                <option>
+                  Afternoon
+                </option>
+
+                <option>
+                  Evening
+                </option>
+
+              </select>
+
+            </label>
+
+          </div>
+
+
+          <label>
+
+            Notes
+
+            <textarea
+              id="leadNotes"
+              rows="4"
+              placeholder="Tell us briefly what you need."
+            ></textarea>
+
+          </label>
+
+
+          <button
+            class="btn btn-primary full"
+            type="submit"
+          >
+            Submit request
+            <span>→</span>
+          </button>
+
+
+          <p
+            class="form-result"
+            id="formResult"
+            role="status"
+          ></p>
+
+        </form>
+
+      </div>
+
+    </section>
+<!-- ================= FAQ ================= -->
+
+<section class="section faq-section" id="faq">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div class="eyebrow">
+        Frequently asked questions
+      </div>
+
+      <h2>
+        Quick answers for
+        <span>common customer questions.</span>
+      </h2>
+
+      <p>
+        Ava can handle routine questions instantly,
+        helping customers get answers without waiting.
+      </p>
+
+    </div>
+
+
+    <div class="faq-list">
+
+      <!-- FAQ 1 -->
+      <div class="faq-item">
+
+        <button class="faq-question">
+
+          <span>
+            What services do you provide?
+          </span>
+
+          <span class="faq-icon">
+            +
+          </span>
+
+        </button>
+
+        <div class="faq-answer">
+
+          <p>
+            Northstar Home Services provides HVAC / AC repair,
+            plumbing, electrical work, and general home maintenance.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- FAQ 2 -->
+      <div class="faq-item">
+
+        <button class="faq-question">
+
+          <span>
+            What are your opening hours?
+          </span>
+
+          <span class="faq-icon">
+            +
+          </span>
+
+        </button>
+
+        <div class="faq-answer">
+
+          <p>
+            Our standard service hours are Monday to Sunday,
+            8:00 AM to 10:00 PM.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- FAQ 3 -->
+      <div class="faq-item">
+
+        <button class="faq-question">
+
+          <span>
+            Do you provide emergency service?
+          </span>
+
+          <span class="faq-icon">
+            +
+          </span>
+
+        </button>
+
+        <div class="faq-answer">
+
+          <p>
+            Yes. 24/7 emergency support is available for
+            urgent HVAC, plumbing, and electrical issues.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- FAQ 4 -->
+      <div class="faq-item">
+
+        <button class="faq-question">
+
+          <span>
+            How can I request a quote?
+          </span>
+
+          <span class="faq-icon">
+            +
+          </span>
+
+        </button>
+
+        <div class="faq-answer">
+
+          <p>
+            Use the request form below and provide your service
+            details. A team member can review your request
+            and prepare a suitable quote.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- FAQ 5 -->
+      <div class="faq-item">
+
+        <button class="faq-question">
+
+          <span>
+            What payment methods do you accept?
+          </span>
+
+          <span class="faq-icon">
+            +
+          </span>
+
+        </button>
+
+        <div class="faq-answer">
+
+          <p>
+            We accept cash, card, and online payment.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- FAQ 6 -->
+      <div class="faq-item">
+
+        <button class="faq-question">
+
+          <span>
+            Can I speak with a human?
+          </span>
+
+          <span class="faq-icon">
+            +
+          </span>
+
+        </button>
+
+        <div class="faq-answer">
+
+          <p>
+            Absolutely. Ava can hand the conversation over
+            to a human team member through the callback request flow.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+
+    <div class="container footer-row">
+
+      <div class="brand brand-footer">
+
+        <span class="brand-mark">
+          A
+        </span>
+
+        <span>
+          AvaDesk
+        </span>
+
+      </div>
+
+
+      <p>
+        Portfolio demo by Muhammad Hammad • AI receptionist concept
+      </p>
+
+
+      <a href="#top">
+        Back to top ↑
+      </a>
+
+    </div>
+
+  </footer>
+<!-- Floating WhatsApp Button -->
+<a
+  class="floating-whatsapp"
+  href="https://wa.me/971500000000"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Contact Northstar Home Services on WhatsApp"
+>
+  <span class="whatsapp-icon">◉</span>
+
+  <span class="whatsapp-text">
+    Chat on WhatsApp
+  </span>
+</a>
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
